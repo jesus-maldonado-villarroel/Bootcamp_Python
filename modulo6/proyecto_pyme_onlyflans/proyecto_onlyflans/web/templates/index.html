@@ -10,6 +10,22 @@
   <body>
     {% block 'content' %}
     <div class="container">indice</div>
-    {% endblock %}
+    <div class="row">
+      {% for flan in flanes %}
+      <div class="col-md-4">
+        <div class="card">
+          <img
+            src="{{ flan.image.url }}"
+            class="card-img-top"
+            alt="{{ flan.name }}"
+          />
+          <div class="card-body">
+            <h5 class="card-tittle">{{ flan.name }}</h5>
+            <p class="card-text">{{ flan.description }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %} {% endblock %}
+    </div>
   </body>
 </html>

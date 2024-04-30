@@ -1,10 +1,12 @@
 from django.shortcuts import render
-
+from .models import Flan
 # Create your views here.
 
 
 def indice(request):
-    return render(request, 'index.html', {})
+    flanes_publicos = Flan.objects.filter(is_private=False)
+    context = {'flanes': flanes_publicos}
+    return render(request, 'index.html', context)
 
 
 def acerca(request):
@@ -12,7 +14,9 @@ def acerca(request):
 
 
 def bienvenido(request):
-    return render(request, 'welcome.html', {})
+    flanes_privados = Flan.objects.filter(is_private=True)
+    context = {'flanes': flanes_privados}
+    return render(request, 'welcome.html', context)
 
 
 def base(request):
