@@ -8,13 +8,15 @@
   </head>
   <body>
     {% block 'content' %}
-    <div class="container">bienvenido al cliente</div>
+    <div class="container">
+      <h1>Estos flan son unicos para clientes registrados</h1>
+    </div>
     <div class="row">
       {% for flan in flanes %}
-      <div class="col-md-4">
+      <div class="col-md-2">
         <div class="card">
           <img
-            src="{{ flan.image.url }}"
+            src="{{ flan.image_url }}"
             class="card-img-top"
             alt="{{ flan.name }}"
           />

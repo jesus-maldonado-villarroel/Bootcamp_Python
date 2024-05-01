@@ -9,13 +9,13 @@
   </head>
   <body>
     {% block 'content' %}
-    <div class="container">indice</div>
+    <div class="container"><h1>Estos son nuestros mejores flan</h1></div>
     <div class="row">
       {% for flan in flanes %}
-      <div class="col-md-4">
+      <div class="col-md-2">
         <div class="card">
           <img
-            src="{{ flan.image.url }}"
+            src="{{ flan.image_url }}"
             class="card-img-top"
             alt="{{ flan.name }}"
           />
