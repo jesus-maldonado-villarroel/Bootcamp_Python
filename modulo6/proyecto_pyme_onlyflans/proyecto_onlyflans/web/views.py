@@ -41,3 +41,11 @@ def contacto(request):
 
 def exito(request):
     return render(request, 'exito.html', {})
+
+
+def login(request):
+    return render(request, 'login.html', {})
+
+
+def logout(request):
+    return render(request, 'logout.html', {})
