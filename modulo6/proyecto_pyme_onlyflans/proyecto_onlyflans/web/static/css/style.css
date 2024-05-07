@@ -1,0 +1,8 @@
+.expanded {
+    overflow: visible;
+    height: auto;
+}
+
+.fondo{
+    background-color: rgb(250, 160, 250);
+}

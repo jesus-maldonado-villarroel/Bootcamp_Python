@@ -13,7 +13,7 @@
     </div>
     <div class="row">
       {% for flan in flanes %}
-      <div class="col-md-2">
+      <div class="col-md-3">
         <div class="card">
           <img
             src="{{ flan.image_url }}"
@@ -22,12 +22,39 @@
           />
           <div class="card-body">
             <h5 class="card-tittle">{{ flan.name }}</h5>
-            <p class="card-text">{{ flan.description }}</p>
+            <p class="card-text" id="description{{ forloop.counter }}">
+              {{ flan.description }}
+            </p>
+            <button
+              onclick="toggleDescription('{{ forloop.counter }}')"
+              id="toggleBtn{{ forloop.counter }}"
+            >
+              Mostrar más
+            </button>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
+    {% endblock %} {% block scripts %}
+    <script>
+      function toggleDescription(cardId) {
+        console.log("Botón presionado para la tarjeta número: " + cardId);
+        var description = document.getElementById("description" + cardId);
+        var toggleBtn = document.getElementById("toggleBtn" + cardId);
+
+        if (
+          description.style.display === "none" ||
+          description.style.display === ""
+        ) {
+          description.style.display = "block";
+          toggleBtn.textContent = "Mostrar menos";
+        } else {
+          description.style.display = "none";
+          toggleBtn.textContent = "Mostrar más";
+        }
+      }
+    </script>
     {% endblock %}
   </body>
 </html>
