@@ -18,7 +18,10 @@
       {% block 'header' %} {% include 'header.html' %} {% endblock %}
     </header>
 
-    <nav>{% block 'navbar' %} {% include 'navbar.html' %} {% endblock %}</nav>
+    <nav class="nav">
+      <li class="item"></li>
+      {% block 'navbar' %} {% include 'navbar.html' %} {% endblock %}
+    </nav>
 
     {% block 'content' %} {% endblock %}
     <footer>
