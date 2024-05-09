@@ -10,3 +10,12 @@
 .nav{
     background-color: rgb(228, 195, 151);
 }
+
+.my-style {
+    /* Estilos específicos para el formulario de inicio de sesión en login.html */
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* Otros estilos específicos que desees aplicar */
+}

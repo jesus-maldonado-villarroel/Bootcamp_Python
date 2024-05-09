@@ -23,7 +23,7 @@
             <a
               class="nav-link active"
               aria-current="page"
-              href="http://127.0.0.1:8000"
+              href="{% url 'indice'%}"
               >Inicio</a
             >
           </li>
@@ -31,7 +31,7 @@
             <a
               class="nav-link active"
               aria-current="page"
-              href="http://127.0.0.1:8000/acerca"
+              href="{% url 'acerca'%}"
               >Acerca</a
             >
           </li>
@@ -39,16 +39,16 @@
             <a
               class="nav-link active"
               aria-current="page"
-              href="http://127.0.0.1:8000/contacto"
+              href="{% url 'contacto'%}"
               >Contacto</a
             >
           </li>
         </li>
         {% if user.is_authenticated %}
           <li class="nav-item"></li>
-          <li> <a class="nav-link" href="{% url 'logout'%}?next=/">Cerrar sesión</a></li>"
+          <li> <a class="nav-link" href="{% url 'logout'%}?next=/">Logout</a></li>"
         {% else %}
-           <li><a href="{% url 'login'%}?next=/bienvenido">Iniciar sesión</a></li>
+           <li><a href="{% url 'login'%}?next=/bienvenido">Login</a></li>
         {% endif %}
       </ul>
         </ul>
