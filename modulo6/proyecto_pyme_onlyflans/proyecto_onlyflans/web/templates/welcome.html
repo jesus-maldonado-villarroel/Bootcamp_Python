@@ -1,10 +1,11 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Bienvenido a onlyflans{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     {% block 'content' %}
@@ -25,36 +26,11 @@
             <p class="card-text" id="description{{ forloop.counter }}">
               {{ flan.description }}
             </p>
-            <button
-              onclick="toggleDescription('{{ forloop.counter }}')"
-              id="toggleBtn{{ forloop.counter }}"
-            >
-              Mostrar más
-            </button>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
-    {% endblock %} {% block scripts %}
-    <script>
-      function toggleDescription(cardId) {
-        console.log("Botón presionado para la tarjeta número: " + cardId);
-        var description = document.getElementById("description" + cardId);
-        var toggleBtn = document.getElementById("toggleBtn" + cardId);
-
-        if (
-          description.style.display === "none" ||
-          description.style.display === ""
-        ) {
-          description.style.display = "block";
-          toggleBtn.textContent = "Mostrar menos";
-        } else {
-          description.style.display = "none";
-          toggleBtn.textContent = "Mostrar más";
-        }
-      }
-    </script>
     {% endblock %}
   </body>
 </html>

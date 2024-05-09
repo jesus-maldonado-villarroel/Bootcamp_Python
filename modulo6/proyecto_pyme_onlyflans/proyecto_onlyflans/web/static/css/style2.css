@@ -1,22 +1,82 @@
 .nav-item{
     margin-right: 300px;
-    border-radius: 5px; /* Agrega un borde redondeado */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     
 }
 
 .nav-link{
     font-size: 17px;
     padding: 10px 15px;
-    border-radius: 5px; /* Agrega un borde redondeado */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 a{
     font-size: 17px;
     padding: 10px 15px;
-    border-radius: 5px; /* Agrega un borde redondeado */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    text-decoration: none; 
     color: inherit;
+}
+
+.welcome-message {
+    background-color: #ffc107;
+    border: 2px solid #ffc107; 
+    border-radius: 10px; 
+    padding: 30px; 
+    text-align: center; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.welcome-text {
+    font-size: 24px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 20px; 
+}
+
+/* contactus*/
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+
+.invalid-feedback {
+    color: #dc3545;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.card {
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.card-header {
+    border-bottom: 2px solid #007bff;
+}
+
+.card-body {
+    padding: 2rem;
 }

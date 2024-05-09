@@ -24,7 +24,7 @@
     </nav>
 
     {% block 'content' %} {% endblock %}
-    <footer>
+    <footer class="footer">
       {% block 'footer' %} {% include 'footer.html' %} {% endblock %}
     </footer>
 
@@ -33,29 +33,5 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
-    {% block scripts %}
-    <script>
-      function toggleDescription(cardId) {
-        var shortDescription = document.getElementById(
-          "description-short-" + cardId
-        );
-        var fullDescription = document.getElementById(
-          "description-full-" + cardId
-        );
-        var toggleBtn = document.getElementById("toggleBtn" + cardId);
-
-        if (shortDescription.style.display === "none") {
-          shortDescription.style.display = "block";
-          fullDescription.style.display = "none";
-          toggleBtn.textContent = "Mostrar más";
-        } else {
-          shortDescription.style.display = "none";
-          fullDescription.style.display = "block";
-          toggleBtn.textContent = "Mostrar menos";
-        }
-      }
-    </script>
-    {% endblock %}
   </body>
 </html>

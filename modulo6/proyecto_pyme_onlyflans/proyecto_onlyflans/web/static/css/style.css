@@ -10,12 +10,71 @@
 .nav{
     background-color: rgb(228, 195, 151);
 }
-
+.footer{
+    background-color: rgb(228, 195, 151);
+}
 .my-style {
-    /* Estilos específicos para el formulario de inicio de sesión en login.html */
+    
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 10px;
     margin-top: 20px;
-    /* Otros estilos específicos que desees aplicar */
+    
+}
+
+/* about */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.section img {
+    margin-right: 20px;
+}
+
+.section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.section p {
+    font-size: 18px;
+    color: #666;
+    text-align: justify;
+}
+
+/*index */
+
+.card-text {
+    max-height: 200px; /* Establece la altura máxima para la descripción */
+    overflow-y: auto; /* Agrega una barra de desplazamiento vertical cuando sea necesario */
+}
+
+.card {
+    margin: 10px; /* Puedes ajustar este valor según el espacio deseado */
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#p {
+    display: flex;
+}
+
+#p p {
+    margin-right: 10px; /* Espacio entre los iconos */
 }

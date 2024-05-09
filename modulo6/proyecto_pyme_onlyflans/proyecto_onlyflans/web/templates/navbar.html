@@ -56,11 +56,13 @@
     </div>
   </nav>
 </div>
-{% if user.is_authenticated %}
-    <div class="container mt-3">
-      <div class="alert alert-success" role="alert">
-        ¡Bienvenido, {{ user.get_username }}!
-      </div>
+{% if user.is_authenticated and request.path == '/bienvenido' %}
+<div class="container mt-3">
+  <div class="alert alert-success welcome-message" role="alert">
+    <div class="welcome-text">
+      ¡Hola, {{ user.get_username }}! ¡Qué bueno verte de nuevo!
     </div>
-  {% endif %}
+  </div>
+</div>
+{% endif %}
 </div>

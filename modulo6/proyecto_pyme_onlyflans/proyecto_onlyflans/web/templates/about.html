@@ -1,81 +1,87 @@
 {% extends 'base.html' %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Bienvenido a onlyflans{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     {% block 'content' %}
     <div class="container">
-      <div>
-        <h2>Sobre Nosotros</h2>
-        <p>
-          En OnlyFlans, nos dedicamos a la creación y distribución de los más
-          exquisitos flanes artesanales. Desde nuestro humilde comienzo en una
-          pequeña cocina familiar, hemos crecido hasta convertirnos en un
-          referente en la industria de los postres, llevando nuestra pasión por
-          los flanes a hogares y restaurantes de todo el país.
-        </p>
+      <div class="section">
+        <img src="{% static 'img/sobre.jpg' %}" alt="logo" height="500px">
+        <div>
+          <h2>Sobre Nosotros</h2>
+          <p>En OnlyFlans, nos dedicamos a la creación y distribución de los más
+            exquisitos flanes artesanales. Desde nuestro humilde comienzo en una
+            pequeña cocina familiar, hemos crecido hasta convertirnos en un
+            referente en la industria de los postres, llevando nuestra pasión por
+            los flanes a hogares y restaurantes de todo el país.</p>
+        </div>
       </div>
-      <div>
-        <h2>Nuestra Historia</h2>
-        <p>
-          Fundada en 2005 por la chef María González, OnlyFlans. nació de la
-          búsqueda de un postre que combinara la tradición casera con la calidad
-          gourmet. María, con su amor por la repostería y su habilidad para
-          innovar en la cocina, creó la receta de nuestro flan estrella: suave,
-          cremoso y con un sabor inigualable. Con el boca a boca y la demanda
-          creciente, lo que comenzó como un proyecto casero se convirtió
-          rápidamente en un negocio próspero. Hoy en día, nuestra empresa cuenta
-          con una moderna planta de producción que cumple con los más altos
-          estándares de calidad e higiene, mientras seguimos manteniendo la
-          esencia artesanal que nos distingue.
-        </p>
+      <div class="section">
+        <img src="{% static 'img/historia.jpg' %}" alt="logo" height="500px">
+        <div>
+          <h2>Nuestra Historia</h2>
+          <p>Fundada en 2005 por la chef María González, OnlyFlans. nació de la
+            búsqueda de un postre que combinara la tradición casera con la calidad
+            gourmet. María, con su amor por la repostería y su habilidad para
+            innovar en la cocina, creó la receta de nuestro flan estrella: suave,
+            cremoso y con un sabor inigualable. Con el boca a boca y la demanda
+            creciente, lo que comenzó como un proyecto casero se convirtió
+            rápidamente en un negocio próspero. Hoy en día, nuestra empresa cuenta
+            con una moderna planta de producción que cumple con los más altos
+            estándares de calidad e higiene, mientras seguimos manteniendo la
+            esencia artesanal que nos distingue.</p>
+        </div>
       </div>
-      <div>
-        <h2>Nuestros Productos</h2>
-        <p>
-          En OnlyFlans, nos enorgullecemos de ofrecer una amplia variedad de
-          sabores y presentaciones para satisfacer todos los gustos y ocasiones.
-          Desde el clásico flan de vainilla hasta exquisitas creaciones como
-          flan de café, chocolate o frutas tropicales, cada uno de nuestros
-          productos está elaborado con ingredientes frescos y de la más alta
-          calidad. Además de nuestros flanes individuales, también ofrecemos
-          opciones familiares y para eventos especiales, como bodas y
-          celebraciones corporativas. Nos esforzamos por ser flexibles y
-          adaptarnos a las necesidades de nuestros clientes, ofreciendo incluso
-          opciones sin azúcar para aquellos con restricciones dietéticas.
-        </p>
+      <div class="section">
+        <img src="{% static 'img/productos.jpg' %}" alt="logo" height="500px">
+        <div>
+          <h2>Nuestros Productos</h2>
+          <p>En OnlyFlans, nos enorgullecemos de ofrecer una amplia variedad de
+            sabores y presentaciones para satisfacer todos los gustos y ocasiones.
+            Desde el clásico flan de vainilla hasta exquisitas creaciones como
+            flan de café, chocolate o frutas tropicales, cada uno de nuestros
+            productos está elaborado con ingredientes frescos y de la más alta
+            calidad. Además de nuestros flanes individuales, también ofrecemos
+            opciones familiares y para eventos especiales, como bodas y
+            celebraciones corporativas. Nos esforzamos por ser flexibles y
+            adaptarnos a las necesidades de nuestros clientes, ofreciendo incluso
+            opciones sin azúcar para aquellos con restricciones dietéticas.</p>
+        </div>
       </div>
-      <div>
-        <h2>Nuestra Filosofía</h2>
-        <p>
-          En OnlyFlans, creemos en la importancia de ofrecer no solo productos
-          de alta calidad, sino también en crear experiencias gastronómicas
-          memorables. Nos apasiona deleitar a nuestros clientes con cada bocado,
-          brindando momentos de dulzura y felicidad que perduran en la memoria.
-          Además, nos comprometemos a operar de manera responsable y sostenible,
-          cuidando el medio ambiente y apoyando a las comunidades en las que
-          operamos. Creemos que el éxito de nuestro negocio va más allá de los
-          beneficios financieros, y nos esforzamos por ser un modelo a seguir en
-          términos de ética empresarial y responsabilidad social.
-        </p>
+      <div class="section">
+        <img src="{% static 'img/filosofia.jpg' %}" alt="logo" height="400px">
+        <div>
+          <h2>Nuestra Filosofia</h2>
+          <p>En OnlyFlans, creemos en la importancia de ofrecer no solo productos
+            de alta calidad, sino también en crear experiencias gastronómicas
+            memorables. Nos apasiona deleitar a nuestros clientes con cada bocado,
+            brindando momentos de dulzura y felicidad que perduran en la memoria.
+            Además, nos comprometemos a operar de manera responsable y sostenible,
+            cuidando el medio ambiente y apoyando a las comunidades en las que
+            operamos. Creemos que el éxito de nuestro negocio va más allá de los
+            beneficios financieros, y nos esforzamos por ser un modelo a seguir en
+            términos de ética empresarial y responsabilidad social.</p>
+        </div>
       </div>
-      <div>
-        <h2>Gratitud</h2>
-        <p>
-          ¡Únete a la Experiencia Flanes Deliciosos! Ya sea que estés buscando
-          el postre perfecto para una ocasión especial o simplemente quieras
-          darte un capricho, en OnlyFlans te invitamos a descubrir el placer de
-          nuestros flanes artesanales. Con cada cucharada, te transportarás a un
-          mundo de sabores y sensaciones que te harán volver por más. ¡Gracias
-          por ser parte de nuestra historia y por elegir OnlyFlans como tu
-          destino dulce favorito!
-        </p>
+      <div class="section">
+        <img src="{% static 'img/gratitud.jpg' %}" alt="logo" height="500px">
+        <div>
+          <h2>Gratitud</h2>
+          <p>¡Únete a la Experiencia Flanes Deliciosos! Ya sea que estés buscando
+            el postre perfecto para una ocasión especial o simplemente quieras
+            darte un capricho, en OnlyFlans te invitamos a descubrir el placer de
+            nuestros flanes artesanales. Con cada cucharada, te transportarás a un
+            mundo de sabores y sensaciones que te harán volver por más. ¡Gracias
+            por ser parte de nuestra historia y por elegir OnlyFlans como tu
+            destino dulce favorito!</p>
+        </div>
       </div>
-    </div>
     {% endblock %}
   </body>
 </html>
