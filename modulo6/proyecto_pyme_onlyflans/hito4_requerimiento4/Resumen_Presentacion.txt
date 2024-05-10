@@ -1,0 +1,24 @@
+Hito 1
+
+para comenzar mi proyecto cree la carpeta donde estuve trabajando todo los modulos de este bootcamp, la cree en modulo6
+con el nombre de proyecto_pyme_onlyflans.
+comenzando cree mi entorno virtual, instale las dependencias necesarias para dar inicie al proyecto y finalmente inicie mi
+proyecto.
+
+Hito 2
+
+para comenzar este hito tenemos que iniciar nuestra app, comenzando este hito cree las rutas de index, about y welcome
+agregando respectivas rutas dentro de nuestro archivo urls.py y tambien dentro de view.
+tambien cree mi archivo html base, el cual cargara toda la informacion de los otros html, dentro de mi base creo un header, navbar, mi contenido y el footer cada uno con un diseño basico a modo inicial, una vez esto este resuelto separaremos nuestro header, navbar y footer en archivos html distintos a nuestra base.html. y el contenido sera el contenido de nuestros archivos index, welcome y about.
+
+hito 3
+
+para comenzar este hito partiremos creando nuestro modelo para los flan el cual seran los presentados en nuestro archivo index y los que tienen private true seran mostrados en nuestra ruta de bienvenido ya que seran exclusivos para nuestros clientes registrados, tambien crearemos nuestro formulario de contacto el cual tendra nombre, correo electronico y algun mensaje. y si todo es valido nos mostrara un mensaje de exito al enviar el mensaje 
+
+hito 4
+
+para comenzar este hito creamos nuestro login/logout para nuestros usuarios puedan ver los usuarios de bienvenida.
+
+-----------
+
+para poder finalizar de una buena manera el proyecto comence a darle un mejor diseño a la pagina cambiando el color de fondo, arreglando las card, le agrege un sistema de scroll a las card para que tengan una mejor disposicion y sea mas agradable al lecto de leer. 

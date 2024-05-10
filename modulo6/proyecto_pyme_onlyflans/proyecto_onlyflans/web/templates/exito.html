@@ -1,16 +1,17 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}Bienvenido a onlyflans{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
   </head>
   <body>
     {% block 'content' %}
-    <div class="container">
-      <h2>¡Gracias por contactarte con OnlyFlans!</h2>
-      <p>Te responderemos en breve.</p>
+    <div class="container" id="exito">
+      <h2 class="gracias">¡Gracias por contactarte con OnlyFlans!</h2>
+      <p class="parrafo">Te responderemos en breve.</p>
     </div>
     {% endblock %}
   </body>
