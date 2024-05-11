@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, HttpResponseRedirect
 from .models import Flan, ContactForm, Flon
 from .form import ContactFormModelForm
 from django.http import HttpResponse, HttpResponseRedirect
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -16,6 +17,7 @@ def acerca(request):
     return render(request, 'about.html', {})
 
 
+@login_required
 def bienvenido(request):
     flanes_privados = Flan.objects.filter(is_private=True)
     context = {'flanes': flanes_privados}
