@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Bienvenido a onlyflans{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    {% block 'content' %}
+    <div class="container">
+      <h1 class="text-center">Flanes Publicos322</h1>
+    </div>
+    <div class="row">
+      {% for flon in flones %}
+      <div class="col-md-3">
+        <div class="card">
+          <img
+            src="{{ flon.image_url }}"
+            class="card-img-top"
+            alt="{{ flan.name }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ flon.name }}</h5>
+            <p class="card-text" id="description{{ forloop.counter }}">
+              {{ flon.description }}
+              </p>
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endblock %}
+  </body>
+</html>

@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, HttpResponseRedirect
-from .models import Flan, ContactForm
+from .models import Flan, ContactForm, Flon
 from .form import ContactFormModelForm
 from django.http import HttpResponse, HttpResponseRedirect
 
@@ -49,3 +49,9 @@ def login(request):
 
 def logout(request):
     return render(request, 'logout.html', {})
+
+
+def promocion(request):
+    flones_publicos = Flon.objects.filter(is_private=False)
+    context = {'flones': flones_publicos}
+    return render(request, 'promocion.html', context)

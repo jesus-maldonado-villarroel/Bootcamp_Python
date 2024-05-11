@@ -39,6 +39,24 @@
             <a
               class="nav-link active"
               aria-current="page"
+              href="{% url 'promocion' %}"
+              >Promocion</a
+            >
+          </li>
+          {% if user.is_authenticated %}
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="{% url 'bienvenido' %}"
+              >Bienvenido</a
+            >
+          </li>
+          {% endif %}
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
               href="{% url 'contacto'%}"
               >Contacto</a
             >

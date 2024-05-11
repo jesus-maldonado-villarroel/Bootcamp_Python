@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path, include
-from web.views import indice, acerca, bienvenido, base, contacto, exito
+from web.views import indice, acerca, bienvenido, base, contacto, exito, promocion
 from django.contrib.auth import views as auth_views
 """
 URL configuration for proyecto_onlyflans project.
@@ -27,4 +27,5 @@ urlpatterns = [
     path('contacto', contacto, name="contacto"),
     path('exito', exito, name="exito"),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('promocion', promocion, name="promocion"),
 ]
