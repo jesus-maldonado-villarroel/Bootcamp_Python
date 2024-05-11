@@ -55,3 +55,7 @@ def promocion(request):
     flones_publicos = Flon.objects.filter(is_private=False)
     context = {'flones': flones_publicos}
     return render(request, 'promocion.html', context)
+
+
+def direccion(request):
+    return render(request, 'direccion.html', {})

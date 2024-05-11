@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Bienvenido a onlyflans{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+  <body>
+    {% block 'content' %}
+    <div class="container" id="panel">
+      <div class="container" id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3065.891055638135!2d-89.63246939628873!3d39.78700021301252!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8875398f33e7eebb%3A0xa863ef551447614!2s1800%20S%20Grand%20Ave%20E%2C%20Springfield%2C%20IL%2062703%2C%20EE.%20UU.!5e0!3m2!1ses-419!2scl!4v1715442227336!5m2!1ses-419!2scl"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="container" id="horario">
+        <h2>Horario de atencion</h2>
+        <p>De lunes a Viernes de 09:00 a 19:00</p>
+        <p>Sabado, Domingo y Festivos de 10:00 a 13:00</p>
+      </div>
+    </div>
+    {% endblock %}
+  </body>
+</html>
