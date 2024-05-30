@@ -49,7 +49,7 @@ class Inmueble(models.Model):
     id_comuna = models.ForeignKey('Comuna', on_delete=models.CASCADE)
     id_region = models.ForeignKey('Region', on_delete=models.CASCADE)
     tipo_inmueble = models.CharField(max_length=20, choices=[(
-        'casa', 'Casa'), ('departamento', 'Departamento')])
+        'casa', 'Casa'), ('departamento', 'Departamento'), ('parcela', 'Parcela')])
     precio_mensual = models.FloatField(null=False, blank=False)
     estado = models.BooleanField(default=True)
 
@@ -58,7 +58,7 @@ class Inmueble(models.Model):
                 {self.nombre}:  
                 m2_contruidos: {self.m2_contruidos} cantidad habitaciones: {self.cantidad_habitaciones} cantidad de baños: {self.cantidad_baños}
                 estacionamientos: {self.cantidad_estacionamientos} 
-                direccion: {self.comuna} {self.direccion}
+                direccion: {self.id_comuna} {self.direccion}
                 tipo_vivienda: {self.tipo_inmueble}
                 precio_mensual: {self.precio_mensual}
                 descripcion: {self.descripcion}

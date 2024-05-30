@@ -1,0 +1,45 @@
+[
+    {
+        "model": "inmuebles.Inmueble",
+        "pk": 5,
+        "fields": {
+            "id_inmueble": 4,
+            "id_user": 1,
+            "nombre": "Departamento en la playa",
+            "descripcion": "Hermosa casa frente al mar",
+            "m2_contruidos": 120.5,
+            "m2_totales": 200,
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 3,
+            "cantidad_baños": 2,
+            "direccion": "Playa del Sol 455",
+            "id_comuna": 51,
+            "id_region": 6,
+            "tipo_inmueble": "departamento",
+            "precio_mensual": 500000,
+            "estado": true
+        }
+    },
+    {
+        "model": "inmuebles.Inmueble",
+        "pk": 5,
+        "fields": {
+            "id_inmueble": 5,
+            "id_user": 1,
+            "nombre": "Departamento en la playa",
+            "descripcion": "Hermosa casa frente al mar",
+            "m2_contruidos": 120.5,
+            "m2_totales": 200,
+            "cantidad_estacionamientos": 2,
+            "cantidad_habitaciones": 3,
+            "cantidad_baños": 2,
+            "direccion": "Playa del Sol 453",
+            "id_comuna": 51,
+            "id_region": 6,
+            "tipo_inmueble": "departamento",
+            "precio_mensual": 500000,
+            "estado": true
+        }
+    }
+    
+]

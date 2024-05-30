@@ -1,0 +1,12 @@
+
+Comuna: Viña del Mar
+====================
+Nombre: Departamento 1 en la playa
+Descripción: Hermosa casa frente al mar
+
+Nombre: Departamento 2 en la playa
+Descripción: Hermosa casa frente al mar
+
+Nombre: Departamento 3 en la playa
+Descripción: Hermosa casa frente al mar
+

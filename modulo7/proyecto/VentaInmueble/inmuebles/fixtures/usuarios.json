@@ -1,0 +1,44 @@
+[
+    {
+        "model": "inmuebles.User",
+        "pk": 1,
+        "fields": {
+            "id_user": 1,
+            "nombres": "Juan",
+            "apellidos": "Perez",
+            "rut": "12345678-9",
+            "direccion": "Calle Falsa 123",
+            "telefono": "987654321",
+            "email": "juan.perez@example.com",
+            "tipo_usuario": "arrendatario"
+        }
+    },
+    {
+        "model": "inmuebles.User",
+        "pk": 2,
+        "fields": {
+            "id_user": 2,
+            "nombres": "Sara",
+            "apellidos": "Rojas",
+            "rut": "87654321-9",
+            "direccion": "Calle Real 123",
+            "telefono": "123456789",
+            "email": "s.rojas@example.com",
+            "tipo_usuario": "arrendatario"
+        }
+    },
+    {
+        "model": "inmuebles.User",
+        "pk": 3,
+        "fields": {
+            "id_user": 3,
+            "nombres": "Solly",
+            "apellidos": "Gonzalez",
+            "rut": "74185263-9",
+            "direccion": "Calle posible 123",
+            "telefono": "741852963",
+            "email": "s.gonzalez@example.com",
+            "tipo_usuario": "arrendatario"
+        }
+    }
+]
