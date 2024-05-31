@@ -1,0 +1,14 @@
+[
+    {
+        "model": "inmuebles.user", 
+        "pk": 1, 
+        "fields": {
+            "usuario": 2, 
+            "rut": "123456789", 
+            "direccion": "ssss", 
+            "telefono": "123456789", 
+            "email": "jesus@admin.cl", 
+            "tipo_usuario": "arrendatario"
+        }
+    }
+]

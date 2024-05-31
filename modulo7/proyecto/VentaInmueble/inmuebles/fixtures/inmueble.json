@@ -1,0 +1,59 @@
+[
+    {"model": "inmuebles.inmueble", 
+    "pk": 1, 
+    "fields": {
+        "id_usuario": 2, 
+        "nombre": "departamento n16 en la playa", 
+        "descripcion": "departamento con vista al mar", 
+        "m2_contruidos": 300.0, 
+        "m2_totales": 600.0, 
+        "cantidad_estacionamientos": 2, 
+        "cantidad_habitaciones": 3, 
+        "cantidad_baños": 2, 
+        "direccion": "avenida fake 123", 
+        "id_comuna": 51, 
+        "id_region": 6, 
+        "tipo_inmueble": "departamento", 
+        "precio_mensual": 500000.0, 
+        "estado": true
+        }
+    },
+    {"model": "inmuebles.inmueble", 
+    "pk": 2, 
+    "fields": {
+        "id_usuario": 2, 
+        "nombre": "departamento n15 en la playa", 
+        "descripcion": "departamento con vista al mar", 
+        "m2_contruidos": 300.0, 
+        "m2_totales": 600.0, 
+        "cantidad_estacionamientos": 2, 
+        "cantidad_habitaciones": 3, 
+        "cantidad_baños": 2, 
+        "direccion": "avenida fake 123", 
+        "id_comuna": 51, 
+        "id_region": 6, 
+        "tipo_inmueble": "departamento", 
+        "precio_mensual": 500000.0, 
+        "estado": true
+        }
+    },
+    {"model": "inmuebles.inmueble", 
+    "pk": 3, 
+    "fields": {
+        "id_usuario": 2, 
+        "nombre": "departamento n14 en la playa", 
+        "descripcion": "departamento con vista al mar", 
+        "m2_contruidos": 300.0, 
+        "m2_totales": 600.0, 
+        "cantidad_estacionamientos": 2, 
+        "cantidad_habitaciones": 3, 
+        "cantidad_baños": 2, 
+        "direccion": "avenida fake 123", 
+        "id_comuna": 51, 
+        "id_region": 6, 
+        "tipo_inmueble": "departamento", 
+        "precio_mensual": 500000.0, 
+        "estado": true
+        }
+    }
+]

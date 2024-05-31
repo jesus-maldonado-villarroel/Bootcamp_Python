@@ -1,12 +1,12 @@
 
 Región: Valparaíso
 ====================
-Nombre: Departamento 1 en la playa
-Descripción: Hermosa casa frente al mar
+Nombre: departamento n16 en la playa
+Descripción: departamento con vista al mar
 
-Nombre: Departamento 2 en la playa
-Descripción: Hermosa casa frente al mar
+Nombre: departamento n15 en la playa
+Descripción: departamento con vista al mar
 
-Nombre: Departamento 3 en la playa
-Descripción: Hermosa casa frente al mar
+Nombre: departamento n14 en la playa
+Descripción: departamento con vista al mar
 

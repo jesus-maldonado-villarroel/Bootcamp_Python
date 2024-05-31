@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Inmueble, User, Region, Comuna
-
+from .models import User, Usuario, Inmueble, Comuna, Region
 # Register your models here.
 
-admin.site.register(Inmueble)
 admin.site.register(User)
-admin.site.register(Region)
+admin.site.register(Usuario)
+admin.site.register(Inmueble)
 admin.site.register(Comuna)
+admin.site.register(Region)
