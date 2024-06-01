@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block contenido %}
+{% if user.is_authenticated %}
+      {{ user.username}}
+      {% for i in inmuebles %}
+      <ul>
+        <li>{{i.nombre}}</li>
+        <li>REGION: {{i.id_region}}</li>
+        <li>COMUNA: {{i.id_comuna}}</li>
+      </ul>
+        
+      {% endfor %}
+        <a href="{% url 'logout' %}"">Logout</a>
+      
+    
+    {% else %}
+    
+    <h1>Debes Iniciar sesion para acceder al contenido</h1>
+    <a href="{% url 'login_url' %}"">Login</a>
+    <a href="{% url 'register' %}">Register</a>
+    
+      
+      
+{% endif %}
+{% endblock contenido %}

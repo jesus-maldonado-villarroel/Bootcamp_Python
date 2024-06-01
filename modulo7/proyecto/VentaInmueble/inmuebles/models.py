@@ -2,13 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
-class Usuario(models.Model):
-    id_usuario = models.ForeignKey('auth.User', on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.id_usuario.username
-
-
 class Inmueble(models.Model):
 
     id_usuario = models.ForeignKey('auth.User', on_delete=models.CASCADE)
@@ -31,7 +24,7 @@ class Inmueble(models.Model):
         return f" nombre inmueble: {self.nombre}"
 
 
-class User(models.Model):
+class Perfil(models.Model):
 
     usuario = models.OneToOneField('auth.User', on_delete=models.CASCADE)
     rut = models.CharField(max_length=12, null=False, blank=False)

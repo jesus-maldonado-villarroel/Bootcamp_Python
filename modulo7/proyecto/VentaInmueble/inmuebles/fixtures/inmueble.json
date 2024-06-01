@@ -2,7 +2,7 @@
     {"model": "inmuebles.inmueble", 
     "pk": 1, 
     "fields": {
-        "id_usuario": 2, 
+        "id_usuario": 20, 
         "nombre": "departamento n16 en la playa", 
         "descripcion": "departamento con vista al mar", 
         "m2_contruidos": 300.0, 
@@ -21,7 +21,7 @@
     {"model": "inmuebles.inmueble", 
     "pk": 2, 
     "fields": {
-        "id_usuario": 2, 
+        "id_usuario": 20, 
         "nombre": "departamento n15 en la playa", 
         "descripcion": "departamento con vista al mar", 
         "m2_contruidos": 300.0, 
@@ -40,7 +40,7 @@
     {"model": "inmuebles.inmueble", 
     "pk": 3, 
     "fields": {
-        "id_usuario": 2, 
+        "id_usuario": 20, 
         "nombre": "departamento n14 en la playa", 
         "descripcion": "departamento con vista al mar", 
         "m2_contruidos": 300.0, 
