@@ -1,0 +1,103 @@
+{% extends 'base.html' %} {% block contenido %}
+<h2>{{ title }}</h2>
+
+<form method="GET" action="{% url 'listar_inmuebles_disponibles' %}">
+  <input type="text" name="keyword" placeholder="Buscar por palabra clave" />
+  <select name="comuna" id="selectComuna" style="width: 300px">
+    <option value="">Seleccionar Comuna</option>
+    {% for comuna in comunas %}
+    <option value="{{ comuna.nombre_comuna }}">
+      {{ comuna.nombre_comuna }}
+    </option>
+    {% endfor %}
+  </select>
+  <select name="region" id="selectRegion" style="width: 300px">
+    <option value="">Seleccionar Region</option>
+    {% for region in regiones %}
+    <option value="{{ region.nombre_region }}">
+      {{ region.nombre_region }}
+    </option>
+    {% endfor %}
+  </select>
+  <select name="tipo_inmueble" id="selectInmueble" style="width: 300px">
+    <option value="">Seleccionar tipo de inmueble</option>
+    <option value="casa">Casa</option>
+    <option value="departamento">Departamento</option>
+    <option value="parcela">Parcela</option>
+  </select>
+  <button type="submit">Buscar / Filtrar</button>
+</form>
+
+<div class="row row-cols-1 row-cols-md-2 g-4">
+  {% if viviendas %} {% for vivienda in viviendas %}
+  <div class="col">
+    <div class="card">
+      <img
+        src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-house-with-no-background-png-image_13001602.png"
+        class="card-img-top"
+        alt="Imagen de {{ vivienda.nombre }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ vivienda.nombre }}</h5>
+        <p class="card-text">{{ vivienda.descripcion }}</p>
+        <p class="card-text">
+          Metros construidos: {{ vivienda.m2_contruidos }}
+        </p>
+        <p class="card-text">Metros totales: {{ vivienda.m2_totales }}</p>
+        <p class="card-text">
+          Estacionamientos: {{ vivienda.cantidad_estacionamientos }}
+        </p>
+        <p class="card-text">
+          Habitaciones: {{ vivienda.cantidad_habitaciones }}
+        </p>
+        <p class="card-text">Baños: {{ vivienda.cantidad_baños }}</p>
+        <p class="card-text">Dirección: {{ vivienda.direccion }}</p>
+        <p class="card-text">Comuna: {{ vivienda.id_comuna.nombre_comuna }}</p>
+        <p class="card-text">Región: {{ vivienda.id_region.nombre_region }}</p>
+        <p class="card-text">
+          Tipo de Inmueble: {{ vivienda.get_tipo_inmueble_display }}
+        </p>
+        <p class="card-text">Precio Mensual: ${{ vivienda.precio_mensual }}</p>
+        <p class="card-text">
+          Estado: {{ vivienda.estado|yesno:"Disponible,No disponible" }}
+        </p>
+        <a class="btn btn-primary" href="{% url 'contact' vivienda.pk %}"
+          >Contactar al propietario</a
+        >
+      </div>
+    </div>
+  </div>
+  {% endfor %} {% else %}
+  <div class="col">
+    <div class="card">
+      <div class="card-body">
+        <p class="card-text">No se encontraron resultados</p>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+  rel="stylesheet"
+/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $("#selectComuna").select2({
+      placeholder: "Seleccionar Comuna",
+      allowClear: true,
+    });
+    $("#selectRegion").select2({
+      placeholder: "Seleccionar Región",
+      allowClear: true,
+    });
+    $("#selectInmueble").select2({
+      placeholder: "Seleccionar Inmueble",
+      allowClear: true,
+    });
+  });
+</script>
+{% endblock contenido %}

@@ -1,0 +1,24 @@
+{% extends 'base.html' %} {% block contenido %} {% if user.is_authenticated %}
+<h1>Mensajes recibidos</h1>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+  {% for m in messages %}
+  <div class="col">
+    <div class="card h-100">
+      <div class="card-body">
+        <h5 class="card-title">Mensaje de {{ m.name }}</h5>
+        <ul>
+          <li>Inmueble: {{ m.nombre_inmueble }}</li>
+          <li>Correo: {{ m.correo }}</li>
+          <li>Nombre remitente: {{ m.name }}</li>
+          <li>Mensaje: {{ m.mensaje }}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+<a href="{% url 'logout' %}">Logout</a>
+{% else %}
+<h1>Debes iniciar sesión para acceder al contenido</h1>
+<a href="{% url 'login_url' %}">Login</a>
+{% endif %} {% endblock contenido %}

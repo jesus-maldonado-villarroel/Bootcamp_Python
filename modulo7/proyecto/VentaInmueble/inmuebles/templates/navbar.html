@@ -1,37 +1,52 @@
+{% load static %}
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
 <div  class="container">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        {% load static%}
-        <a class="navbar-brand" src href="#"><img src="https://w7.pngwing.com/pngs/765/566/png-transparent-building-silhouette-skyscraper-angle-building-text-thumbnail.png" alt="logo" height="50px"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      {% load static%}
+      <a class="navbar-brand"  href="#"><img src="https://png.pngtree.com/png-clipart/20220220/original/pngtree-house-property-logo-with-hand-and-real-estate-buildings-png-image_7271247.png" alt="logo" height="50px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+          
+          {% if tipo == 'arrendador'  %}
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'obtener_inmueble' %}">Propiedades</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Bienvenido</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'register_inmueble' user.username%}">Registrar propiedad</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Acerca</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'mensaje'%}">Mensajes</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Contacto</a>
-            </li>
+          {% endif %}
             
-            {% if user.is_authenticated %}
-              <li class="nav-item">
-                <a type="button" class="btn btn-primary" aria-current="page" href="{% url 'logout' %}">Cerrar Sesion</a>
-              </li>
-            {% else %}
-              <li class="nav-item">
-                <a type="button" class="btn btn-primary" aria-current="page" href="{% url 'login_url' %}">Iniciar Sesion</a>
-              </li>
-            {% endif %}
-        </div>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'profile' %}">Mi perfil</a>
+          </li>
+          {% if tipo == 'arrendatario'  %}
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{% url 'listar_inmuebles_disponibles' %}">Busca tu inmueble</a>
+          {% endif %}
+          </li>
+          
+          {% if user.is_authenticated %}
+            <li class="nav-item">
+              <a type="button" class="btn btn-primary" aria-current="page" href="{% url 'logout' %}">Cerrar Sesion</a>
+            </li>
+          {% else %}
+            <li class="nav-item">
+              <a type="button" class="btn btn-primary" aria-current="page" href="{% url 'login_url' %}">Iniciar Sesion</a>
+            </li>
+          {% endif %}
       </div>
-    </nav>
-  </div>
+    </div>
+  </nav>
+</div>

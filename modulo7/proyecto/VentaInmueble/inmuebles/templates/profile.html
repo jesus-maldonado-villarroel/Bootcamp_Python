@@ -1,39 +1,51 @@
-{% extends 'base.html' %}
-
-
-{% block contenido %}
-<h1>
-    Perfil {{user.first_name}} {{user.last_name}}
-    
-</h1>
-<p> 
-{% if not perfil %}
-    
-    <h3>No se encontro un perfil   </h3>
-    <a href="{% url 'register_profile' %}" class="btn btn-primary mx-2">Crear Perfil</a>
-{% else %}
-<ul>
-    <li>
-        Nombre: {{user.first_name}} {{user.last_name}}
-    </li>
-    <li>
-        Tipo : {{perfil.tipo_usuario}}
-    </li>
-    <li>
-        RUT: {{perfil.rut}}
-    </li>
-    <li>
-        Direccion: {{perfil.direccion}}
-    </li>
-    <li>
-        Telefono: {{perfil.telefono}}
-    </li>
-    <li>
-        Correo: {{perfil.email}}
-    </li>
-</ul>
-<a href="{% url 'update_profile' %}" class="btn btn-primary ">Actualizar Perfil</a>
-    
-{% endif %}
-</p>
+{% extends 'base.html' %} {% block contenido %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header bg-primary text-white">
+          <h1 class="text-center">
+            Perfil de {{ user.first_name }} {{ user.last_name }}
+          </h1>
+        </div>
+        <div class="card-body">
+          {% if not perfil %}
+          <h3 class="text-center text-danger">No se encontró un perfil</h3>
+          <div class="text-center mt-3">
+            <a href="{% url 'register_profile' %}" class="btn btn-primary"
+              >Crear Perfil</a
+            >
+          </div>
+          {% else %}
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Nombre:</strong> {{ user.first_name }} {{ user.last_name}}
+            </li>
+            <li class="list-group-item">
+              <strong>Tipo:</strong> {{ perfil.tipo_usuario }}
+            </li>
+            <li class="list-group-item">
+              <strong>RUT:</strong> {{ perfil.rut }}
+            </li>
+            <li class="list-group-item">
+              <strong>Dirección:</strong> {{ perfil.direccion }}
+            </li>
+            <li class="list-group-item">
+              <strong>Teléfono:</strong> {{ perfil.telefono }}
+            </li>
+            <li class="list-group-item">
+              <strong>Correo:</strong> {{ perfil.email }}
+            </li>
+          </ul>
+          <div class="text-center mt-3">
+            <a href="{% url 'update_profile' %}" class="btn btn-primary"
+              >Actualizar Perfil</a
+            >
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock contenido %}

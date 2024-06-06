@@ -32,7 +32,7 @@ class Perfil(models.Model):
     telefono = models.CharField(max_length=9, null=False, blank=False)
     email = models.EmailField(
         max_length=250, unique=True, null=False, blank=False)
-    tipo_usuario = models.CharField(max_length=20, choices=[(
+    tipo_usuario = models.CharField(choices=[(
         'arrendatario', 'Arrendatario'), ('arrendador', 'Arrendador',)])
 
     def __str__(self):
@@ -53,3 +53,15 @@ class Region(models.Model):
 
     def __str__(self):
         return self.nombre_region
+
+
+class Contact(models.Model):
+    arrendador = models.ForeignKey('auth.User', on_delete=models.CASCADE)
+    nombre_inmueble = models.CharField()
+    correo = models.EmailField()
+    celular = models.CharField(max_length=10)
+    name = models.CharField(max_length=64)
+    mensaje = models.TextField()
+
+    def __str__(self):
+        return f"{self.correo} - Mensaje: {self.mensaje}"

@@ -2,14 +2,16 @@
 <div class="container mt-5">
   <div class="card">
     <div class="card-header">
-      <h1>Registrarse</h1>
+      <h1>{{ title }}</h1>
     </div>
     <div class="card-body">
       <form method="POST" class="needs-validation" novalidate>
         {% csrf_token %} {{ form.as_p }} {% if form.errors %}
         <div class="alert alert-danger" role="alert">{{ form.errors }}</div>
         {% endif %}
-        <button class="btn btn-primary" type="submit">Registrarse</button>
+        <button class="btn btn-primary" type="submit">
+          Registrar Inmueble
+        </button>
       </form>
     </div>
   </div>

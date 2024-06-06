@@ -1,0 +1,40 @@
+{% extends 'base.html' %} {% block contenido %} {% if user.is_authenticated %}
+<div class="container mt-4">
+  <div class="row justify-content-between">
+    <div class="col-auto">
+      <h3 class="text-primary">{{ user.username }}</h3>
+    </div>
+    <div class="col-auto">
+      <h4 class="text-success">{{ tipo }}</h4>
+    </div>
+  </div>
+  {% if tipo == "arrendador" %}
+  <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+    {% for i in inmuebles %}
+    <div class="col">
+      <div class="card">
+        <img
+          src="https://png.pngtree.com/png-clipart/20230927/original/pngtree-house-with-no-background-png-image_13001602.png"
+          class="card-img-top"
+          alt="Imagen de {{ i.nombre }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ i.nombre }}</h5>
+          <p class="card-text">Región: {{ i.id_region }}</p>
+          <p class="card-text">Comuna: {{ i.id_comuna }}</p>
+          <a class="btn btn-primary" href="{% url 'update_inmueble' i.id %}"
+            >Editar</a
+          >
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="mt-4">No tienes permiso para ver este contenido.</p>
+  {% endif %}
+</div>
+{% else %}
+<h1 class="mt-4">Debes iniciar sesión para acceder al contenido</h1>
+<a href="{% url 'login_url' %}" class="btn btn-primary mt-3">Login</a>
+{% endif %} {% endblock contenido %}

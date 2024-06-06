@@ -1,25 +1,16 @@
-{% extends 'base.html' %}
-{% block contenido %}
-{% if user.is_authenticated %}
-      {{ user.username}}
-      {% for i in inmuebles %}
-      <ul>
-        <li>{{i.nombre}}</li>
-        <li>REGION: {{i.id_region}}</li>
-        <li>COMUNA: {{i.id_comuna}}</li>
-      </ul>
-        
-      {% endfor %}
-        <a href="{% url 'logout' %}"">Logout</a>
-      
-    
-    {% else %}
-    
-    <h1>Debes Iniciar sesion para acceder al contenido</h1>
-    <a href="{% url 'login_url' %}"">Login</a>
-    <a href="{% url 'register' %}">Register</a>
-    
-      
-      
-{% endif %}
+{% extends 'base.html' %} {% block contenido %}
+<div class="container">
+  <h1 class="mt-5">Bienvenido a nuestra plataforma de venta de inmuebles</h1>
+  <p class="lead">
+    Somos tu mejor opción para encontrar la propiedad de tus sueños. Contamos
+    con una amplia variedad de inmuebles disponibles para la venta, desde
+    apartamentos en la ciudad hasta casas en la playa.
+  </p>
+  <p class="lead">
+    Explora nuestro catálogo y encuentra la propiedad que se ajuste a tus
+    necesidades y presupuesto. ¡No esperes más para hacer realidad el sueño de
+    tener tu propio hogar!
+  </p>
+  <a class="btn btn-primary btn-lg" href="{% url 'register'%}">Registrarse</a>
+</div>
 {% endblock contenido %}
