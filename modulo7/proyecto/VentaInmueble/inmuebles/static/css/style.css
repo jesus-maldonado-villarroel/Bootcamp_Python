@@ -57,7 +57,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 0.5; /* Cambia este valor para ajustar la transparencia */
+  opacity: 0.5; 
 }
 
 .login-container {
@@ -139,32 +139,32 @@ body {
   background-color: #5a6268;
 }
 
-/* Welcome Page Styles */
+
 /* Global Styles */
 html, body {
-  background-color: #f5f5dc; /* Beige suave */
+  background-color: #f5f5dc; 
   height: 100%;
   margin: 0;
-  color: #4e4e4e; /* Cambia el color del texto a un gris oscuro */
-  font-style: italic; /* Añade estilo cursiva al texto */
+  color: #4e4e4e; 
+  font-style: italic; 
 }
 
-/* Welcome Page Styles */
+
 .welcome-container {
-  background-color: #ffffff; /* Fondo claro para el contenedor */
+  background-color: #ffffff; 
   border-radius: 8px;
   padding: 30px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-  color: #333; /* Color de texto oscuro */
+  color: #333; 
 }
 
 .welcome-container h1 {
-  color: #007bff; /* Color del título */
+  color: #007bff; 
 }
 
 .welcome-paragraph {
-  background-color: #ffffff; /* Fondo blanco para los párrafos */
-  color: #555; /* Color del texto */
+  background-color: #ffffff; 
+  color: #555; 
   padding: 15px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -172,7 +172,7 @@ html, body {
 }
 
 .welcome-container .btn-primary {
-  background-color: #007bff; /* Color de fondo del botón */
+  background-color: #007bff; 
   border: none;
   padding: 10px 30px;
   border-radius: 5px;
@@ -180,7 +180,7 @@ html, body {
 }
 
 .welcome-container .btn-primary:hover {
-  background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+  background-color: #0056b3; 
 }
 
 .welcome-container .btn-outline-primary {
@@ -195,7 +195,7 @@ html, body {
   color: #fff;
 }
 
-/* Estilos para el formulario */
+
 .card {
   background-color: #f8f9fa;
   border: 1px solid #ced4da;
@@ -203,14 +203,14 @@ html, body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos para el encabezado del formulario */
+
 .card-header {
   background-color: #007bff;
   color: #ffffff;
   border-bottom: 1px solid #007bff;
 }
 
-/* Estilos para los campos de entrada */
+
 .form-control {
   background-color: #ffffff;
   color: #495057;
@@ -219,7 +219,7 @@ html, body {
   margin-bottom: 10px;
 }
 
-/* Estilos para los botones */
+
 .btn-primary {
   background-color: #007bff;
   border: none;
@@ -228,11 +228,11 @@ html, body {
 .btn-primary:hover {
   background-color: #0056b3;
 }
-/* Espacio entre los elementos del formulario */
+
 .form-group {
   margin-bottom: 20px;
 }
-/* Estilos para el botón de registro */
+
 .btn-register {
   background-color: #28a745;
   color: #ffffff;
@@ -247,7 +247,7 @@ html, body {
   background-color: #218838;
 }
 
-/* Estilos personalizados */
+
 .card {
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -259,23 +259,23 @@ html, body {
 }
 
 .card-img-top {
-  height: 200px; /* Altura personalizada para la imagen */
-  object-fit: cover; /* Escalar la imagen para que quepa en el contenedor */
+  height: 200px; 
+  object-fit: cover; 
 }
 
 .card-title {
-  font-size: 1.2rem; /* Tamaño de fuente del título */
+  font-size: 1.2rem; 
 }
 
 .card-text {
-  font-size: 1rem; /* Tamaño de fuente del texto */
+  font-size: 1rem; 
 }
 
 .btn {
-  font-size: 1rem; /* Tamaño de fuente de los botones */
+  font-size: 1rem; 
 }
 
-/* Estilos para dispositivos pequeños */
+
 @media (max-width: 768px) {
   .card {
     width: 100%;
@@ -290,7 +290,7 @@ html, body {
 .custom-card-body .card-title {
   font-size: 1.25rem;
   margin-bottom: 10px;
-  color: #333; /* Color del título */
+  color: #333; 
 }
 
 .custom-card-body .card-text {
@@ -303,21 +303,21 @@ html, body {
   width: 20px;
   height: 20px;
   margin-right: 5px;
-  background-image: url('ruta/a/tu/icono.svg'); /* Reemplaza 'ruta/a/tu/icono.svg' con la ruta de tu icono */
+  background-image: url('ruta/a/tu/icono.svg');
   background-size: contain;
 }
 
 .custom-card-body .btn-primary {
-  background-color: #007bff; /* Color de fondo del botón */
-  border-color: #007bff; /* Color del borde del botón */
+  background-color: #007bff; 
+  border-color: #007bff; 
 }
 
 .custom-card-body .btn-primary:hover {
-  background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
-  border-color: #0056b3; /* Color del borde del botón al pasar el mouse */
+  background-color: #0056b3; 
+  border-color: #0056b3; 
 }
 
-/* Estilos CSS para contact.html */
+
 
 .contact-title {
   color: #333;
@@ -336,7 +336,7 @@ html, body {
   border-radius: 5px;
   padding: 20px;
   margin: 10px;
-  width: calc(33.333% - 20px); /* Ajustar el ancho de la tarjeta según tus necesidades */
+  width: calc(33.333% - 20px); 
 }
 
 .message-body {
@@ -361,9 +361,6 @@ html, body {
   text-decoration: underline;
 }
 
-/* style.css */
-
-/* Estilos para el formulario de contacto */
 .contact-form {
     margin-top: 20px;
 }
@@ -382,7 +379,7 @@ html, body {
 }
 
 .contact-form textarea {
-    height: 150px; /* Ajusta la altura según tus necesidades */
+    height: 150px; 
 }
 
 .contact-form button {
@@ -412,15 +409,15 @@ html, body {
 #con {
   display: flex;
   justify-content: space-between;
-  background-color: #e5e5c7; /* Beige más oscuro */
-  padding: 10px; /* Ajusta el relleno según sea necesario */
+  background-color: #e5e5c7; 
+  padding: 10px; 
 }
 
 #footer {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Para alinear verticalmente los elementos */
-  width: 70%; /* Por ejemplo, ajusta el ancho del footer según tu diseño */
+  align-items: center; 
+  width: 70%; 
 }
 
 #footer h6 {
@@ -432,26 +429,26 @@ html, body {
 }
 
 #p p {
-  margin: 0; /* Para quitar el margen de los párrafos dentro de #p */
+  margin: 0; 
 }
 
 #p p:not(:last-child) {
-  margin-right: 10px; /* Para agregar un espacio entre los iconos */
+  margin-right: 10px; 
 }
 .fa-brands {
-  font-size: 24px; /* Ajusta el tamaño de los íconos según tu preferencia */
+  font-size: 24px; 
 }
 
 
 .center-image {
   display: block;
   margin: 0 auto;
-  max-width: 400px; /* Ajusta el tamaño máximo de la imagen según tu preferencia */
-  max-height: 400px; /* Ajusta el tamaño máximo de la imagen según tu preferencia */
+  max-width: 400px; 
+  max-height: 400px; 
   width: auto;
   height: auto;
-  border-radius: 50%; /* Hace que la imagen tenga forma redonda */
-  border: 5px solid #fff; /* Opcional: añade un borde blanco a la imagen */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra */
+  border-radius: 50%; 
+  border: 5px solid #fff; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /
 }
 
