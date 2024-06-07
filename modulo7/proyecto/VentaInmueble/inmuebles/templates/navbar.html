@@ -6,7 +6,6 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      {% load static%}
       <a class="navbar-brand"  href="#"><img src="https://png.pngtree.com/png-clipart/20220220/original/pngtree-house-property-logo-with-hand-and-real-estate-buildings-png-image_7271247.png" alt="logo" height="50px"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,9 +22,11 @@
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="{% url 'register_inmueble' user.username%}">Registrar propiedad</a>
             </li>
+            
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="{% url 'mensaje'%}">Mensajes</a>
+              <a class="nav-link active" aria-current="page" href="{% url 'mensaje'%}">Mensajes <span id="new-message-count" class="badge bg-primary"></span></a>
             </li>
+            
           {% endif %}
             
           <li class="nav-item">

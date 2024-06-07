@@ -1,4 +1,3 @@
-
 .navbar {
     background-color: #ffffff; 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
@@ -36,4 +35,423 @@
     box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.5); 
   }
   
-  
+/*login */
+
+
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Login Page Styles */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.background-image {
+  background-image: url('https://previews.123rf.com/images/mrpeak/mrpeak1206/mrpeak120600077/14223497-choshukaku-la-casa-de-estilo-japon%C3%A9s-en-el-jard%C3%ADn-sankeien-yokohama-jap%C3%B3n.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5; /* Cambia este valor para ajustar la transparencia */
+}
+
+.login-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+}
+
+.login-container h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form .form-group {
+  margin-bottom: 15px;
+}
+
+.login-form .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.login-form .form-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.login-form .form-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.login-form .btn {
+  width: 48%;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+/* Welcome Page Styles */
+/* Global Styles */
+html, body {
+  background-color: #f5f5dc; /* Beige suave */
+  height: 100%;
+  margin: 0;
+  color: #4e4e4e; /* Cambia el color del texto a un gris oscuro */
+  font-style: italic; /* Añade estilo cursiva al texto */
+}
+
+/* Welcome Page Styles */
+.welcome-container {
+  background-color: #ffffff; /* Fondo claro para el contenedor */
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  color: #333; /* Color de texto oscuro */
+}
+
+.welcome-container h1 {
+  color: #007bff; /* Color del título */
+}
+
+.welcome-paragraph {
+  background-color: #ffffff; /* Fondo blanco para los párrafos */
+  color: #555; /* Color del texto */
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.welcome-container .btn-primary {
+  background-color: #007bff; /* Color de fondo del botón */
+  border: none;
+  padding: 10px 30px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.welcome-container .btn-primary:hover {
+  background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+}
+
+.welcome-container .btn-outline-primary {
+  border-color: #007bff;
+  color: #007bff;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+
+.welcome-container .btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Estilos para el formulario */
+.card {
+  background-color: #f8f9fa;
+  border: 1px solid #ced4da;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para el encabezado del formulario */
+.card-header {
+  background-color: #007bff;
+  color: #ffffff;
+  border-bottom: 1px solid #007bff;
+}
+
+/* Estilos para los campos de entrada */
+.form-control {
+  background-color: #ffffff;
+  color: #495057;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los botones */
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+/* Espacio entre los elementos del formulario */
+.form-group {
+  margin-bottom: 20px;
+}
+/* Estilos para el botón de registro */
+.btn-register {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-register:hover {
+  background-color: #218838;
+}
+
+/* Estilos personalizados */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2);
+}
+
+.card-img-top {
+  height: 200px; /* Altura personalizada para la imagen */
+  object-fit: cover; /* Escalar la imagen para que quepa en el contenedor */
+}
+
+.card-title {
+  font-size: 1.2rem; /* Tamaño de fuente del título */
+}
+
+.card-text {
+  font-size: 1rem; /* Tamaño de fuente del texto */
+}
+
+.btn {
+  font-size: 1rem; /* Tamaño de fuente de los botones */
+}
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
+  .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.custom-card-body {
+  padding: 20px;
+}
+
+.custom-card-body .card-title {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  color: #333; /* Color del título */
+}
+
+.custom-card-body .card-text {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.custom-card-body .info-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  background-image: url('ruta/a/tu/icono.svg'); /* Reemplaza 'ruta/a/tu/icono.svg' con la ruta de tu icono */
+  background-size: contain;
+}
+
+.custom-card-body .btn-primary {
+  background-color: #007bff; /* Color de fondo del botón */
+  border-color: #007bff; /* Color del borde del botón */
+}
+
+.custom-card-body .btn-primary:hover {
+  background-color: #0056b3; /* Color de fondo del botón al pasar el mouse */
+  border-color: #0056b3; /* Color del borde del botón al pasar el mouse */
+}
+
+/* Estilos CSS para contact.html */
+
+.contact-title {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.message-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  width: calc(33.333% - 20px); /* Ajustar el ancho de la tarjeta según tus necesidades */
+}
+
+.message-body {
+  color: #555;
+}
+
+.message-sender {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.logout-link,
+.login-link {
+  display: block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007bff;
+}
+
+.logout-link:hover,
+.login-link:hover {
+  text-decoration: underline;
+}
+
+/* style.css */
+
+/* Estilos para el formulario de contacto */
+.contact-form {
+    margin-top: 20px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form textarea {
+    height: 150px; /* Ajusta la altura según tus necesidades */
+}
+
+.contact-form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para las tarjetas de mensaje */
+.message-card {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.message-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#con {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e5e5c7; /* Beige más oscuro */
+  padding: 10px; /* Ajusta el relleno según sea necesario */
+}
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Para alinear verticalmente los elementos */
+  width: 70%; /* Por ejemplo, ajusta el ancho del footer según tu diseño */
+}
+
+#footer h6 {
+  margin: 0;
+}
+
+#p {
+  display: flex;
+}
+
+#p p {
+  margin: 0; /* Para quitar el margen de los párrafos dentro de #p */
+}
+
+#p p:not(:last-child) {
+  margin-right: 10px; /* Para agregar un espacio entre los iconos */
+}
+.fa-brands {
+  font-size: 24px; /* Ajusta el tamaño de los íconos según tu preferencia */
+}
+
+
+.center-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 400px; /* Ajusta el tamaño máximo de la imagen según tu preferencia */
+  max-height: 400px; /* Ajusta el tamaño máximo de la imagen según tu preferencia */
+  width: auto;
+  height: auto;
+  border-radius: 50%; /* Hace que la imagen tenga forma redonda */
+  border: 5px solid #fff; /* Opcional: añade un borde blanco a la imagen */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Añade una sombra */
+}
+

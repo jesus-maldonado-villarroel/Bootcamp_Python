@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -18,9 +19,9 @@
     <div>
       {% block header %} {% include 'header.html' %} {% endblock header%}
     </div>
-    <div>
+    <navbar class="nav">
       {% block navbar %} {% include 'navbar.html' %} {% endblock navbar %}
-    </div>
+    </navbar>
 
     <div class="container">
       {% block contenido %}contenido{% endblock contenido %}
@@ -35,3 +36,33 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>
   </body>
 </html>
+<script>
+  // Función para actualizar la cantidad de mensajes nuevos
+  function updateNewMessageCount() {
+    // Hacer una solicitud GET al servidor para obtener la cantidad de mensajes nuevos
+    fetch("{% url 'new_message_count' %}")
+      .then((response) => response.json())
+      .then((data) => {
+        // Actualizar el contador en el navbar con la cantidad de mensajes nuevos
+        const newMessageCountContainer =
+          document.getElementById("new-message-count");
+        if (newMessageCountContainer) {
+          newMessageCountContainer.innerText = data.new_message_count;
+        }
+      })
+      .catch((error) => {
+        console.error(
+          "Error al obtener la cantidad de mensajes nuevos:",
+          error
+        );
+      });
+  }
+
+  // Actualizar la cantidad de mensajes nuevos cada 5 segundos
+  setInterval(updateNewMessageCount, 5000);
+
+  // Llamar a la función para actualizar la cantidad de mensajes nuevos cuando se carga la página
+  document.addEventListener("DOMContentLoaded", () => {
+    updateNewMessageCount();
+  });
+</script>

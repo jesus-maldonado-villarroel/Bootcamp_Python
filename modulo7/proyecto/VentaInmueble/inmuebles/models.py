@@ -62,6 +62,8 @@ class Contact(models.Model):
     celular = models.CharField(max_length=10)
     name = models.CharField(max_length=64)
     mensaje = models.TextField()
+    fecha_recepcion = models.DateTimeField(auto_now_add=True)
+    leido = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.correo} - Mensaje: {self.mensaje}"

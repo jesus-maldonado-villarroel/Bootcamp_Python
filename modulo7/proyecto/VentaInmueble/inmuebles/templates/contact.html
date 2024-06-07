@@ -1,24 +1,22 @@
 {% extends 'base.html' %} {% block contenido %} {% if user.is_authenticated %}
-<h1>Mensajes recibidos</h1>
-<div class="row row-cols-1 row-cols-md-3 g-4">
+<h1 class="contact-title">Mensajes recibidos</h1>
+<div class="message-container">
   {% for m in messages %}
-  <div class="col">
-    <div class="card h-100">
-      <div class="card-body">
-        <h5 class="card-title">Mensaje de {{ m.name }}</h5>
-        <ul>
-          <li>Inmueble: {{ m.nombre_inmueble }}</li>
-          <li>Correo: {{ m.correo }}</li>
-          <li>Nombre remitente: {{ m.name }}</li>
-          <li>Mensaje: {{ m.mensaje }}</li>
-        </ul>
-      </div>
+  <div class="message-card">
+    <div class="message-body">
+      <h2 class="message-sender">Mensaje de {{ m.name }}</h2>
+      <ul>
+        <li><strong>Inmueble:</strong> {{ m.nombre_inmueble }}</li>
+        <li><strong>Correo:</strong> {{ m.correo }}</li>
+        <li><strong>Nombre remitente:</strong> {{ m.name }}</li>
+        <li><strong>Mensaje:</strong> {{ m.mensaje }}</li>
+      </ul>
     </div>
   </div>
   {% endfor %}
 </div>
-<a href="{% url 'logout' %}">Logout</a>
+<a href="{% url 'logout' %}" class="logout-link">Logout</a>
 {% else %}
-<h1>Debes iniciar sesión para acceder al contenido</h1>
-<a href="{% url 'login_url' %}">Login</a>
+<h1 class="login-prompt">Debes iniciar sesión para acceder al contenido</h1>
+<a href="{% url 'login_url' %}" class="login-link">Login</a>
 {% endif %} {% endblock contenido %}

@@ -90,3 +90,9 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = ('correo', 'celular', 'name', 'mensaje')
+        labels = {
+            'correo': 'Correo',
+            'celular': 'Celular',
+            'name': 'Nombre',
+            'mensaje': 'Mensaje'
+        }

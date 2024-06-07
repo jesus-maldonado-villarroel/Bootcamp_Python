@@ -1,10 +1,11 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render, HttpResponse, HttpResponseRedirect, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Inmueble, Perfil, Region, Comuna, Contact
 from .forms import UserForm, PerfilForm, InmuebleForm, ContactForm
 from django.contrib.auth import login, authenticate
+from django.utils import timezone
 # Create your views here.
 
 
@@ -271,3 +272,16 @@ def messages(request):
         'tipo': tipo
     }
     return render(request, 'contact.html', context)
+
+
+def new_message_count(request):
+    if request.user.is_authenticated:
+        # Obtener la fecha de última conexión del usuario
+        last_login = request.user.last_login
+
+        # Filtrar los mensajes recibidos después de la última conexión del usuario
+        new_message_count = Contact.objects.filter(
+            arrendador=request.user, fecha_recepcion__gt=last_login).count()
+        return JsonResponse({'new_message_count': new_message_count})
+    else:
+        return JsonResponse({'new_message_count': 0})

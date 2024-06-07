@@ -1,16 +1,29 @@
-{% extends 'base.html' %} {% block contenido %}
-<div class="container">
-  <h1 class="mt-5">Bienvenido a nuestra plataforma de venta de inmuebles</h1>
-  <p class="lead">
+{% extends 'base.html' %} {% load static %}
+
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+</head>
+
+{% block contenido %}
+<div class="welcome-container container text-center py-5">
+  <img
+    src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Choushuukaku.JPG/3264px-Mapcarta.jpg"
+    alt="Welcome Image"
+    class="center-image"
+  />
+  <h1 class="mt-5 display-4">
+    Bienvenido a nuestra plataforma de venta de inmuebles
+  </h1>
+  <div class="welcome-paragraph lead my-4">
     Somos tu mejor opción para encontrar la propiedad de tus sueños. Contamos
     con una amplia variedad de inmuebles disponibles para la venta, desde
     apartamentos en la ciudad hasta casas en la playa.
-  </p>
-  <p class="lead">
+  </div>
+  <div class="welcome-paragraph lead mb-4">
     Explora nuestro catálogo y encuentra la propiedad que se ajuste a tus
     necesidades y presupuesto. ¡No esperes más para hacer realidad el sueño de
     tener tu propio hogar!
-  </p>
-  <a class="btn btn-primary btn-lg" href="{% url 'register'%}">Registrarse</a>
+  </div>
+  <a class="btn btn-primary btn-lg" href="{% url 'register' %}">Registrarse</a>
 </div>
 {% endblock contenido %}
