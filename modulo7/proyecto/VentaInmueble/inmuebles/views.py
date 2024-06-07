@@ -276,10 +276,9 @@ def messages(request):
 
 def new_message_count(request):
     if request.user.is_authenticated:
-        # Obtener la fecha de última conexión del usuario
+
         last_login = request.user.last_login
 
-        # Filtrar los mensajes recibidos después de la última conexión del usuario
         new_message_count = Contact.objects.filter(
             arrendador=request.user, fecha_recepcion__gt=last_login).count()
         return JsonResponse({'new_message_count': new_message_count})
