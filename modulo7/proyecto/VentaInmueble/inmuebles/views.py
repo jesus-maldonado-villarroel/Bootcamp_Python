@@ -284,3 +284,18 @@ def new_message_count(request):
         return JsonResponse({'new_message_count': new_message_count})
     else:
         return JsonResponse({'new_message_count': 0})
+
+
+def delete_inmueble(request, inmueble_id):
+    usuario = request.user
+    inmueble = Inmueble.objects.filter(
+        id=inmueble_id, id_usuario=usuario).first()
+    inmueble.delete()
+    tipo = Perfil.objects.get(usuario=usuario).tipo_usuario
+    inmuebles = Inmueble.objects.filter(id_usuario=usuario)
+    context = {
+        'inmuebles': inmuebles,
+        'tipo': tipo,
+        'title': 'Inmuebles Registrados'
+    }
+    return render(request, 'inmuebles.html', context)

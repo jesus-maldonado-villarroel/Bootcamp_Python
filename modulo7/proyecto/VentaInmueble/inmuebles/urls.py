@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import index, register, register_profile, update_profile, profile, register_inmueble, obtener_inmueble, update_inmueble, listar_inmuebles_disponibles, contact, messages, new_message_count
+from .views import index, register, register_profile, update_profile, profile, register_inmueble, obtener_inmueble, update_inmueble, listar_inmuebles_disponibles, contact, messages, new_message_count, delete_inmueble
 from django.contrib.auth.views import LoginView, LogoutView
 
 urlpatterns = [
@@ -19,5 +19,8 @@ urlpatterns = [
          name='listar_inmuebles_disponibles'),
     path('contact/<int:id>/', contact, name='contact'),
     path('messages/', messages, name='mensaje'),
-    path('new_message_count/', new_message_count, name='new_message_count')
+    path('new_message_count/', new_message_count, name='new_message_count'),
+    path('delete_inmueble/<int:inmueble_id>/',
+         delete_inmueble, name='delete_inmueble'),
+
 ]
